@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crearea elementelor de navigare în pagini web - Laborator 13</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Crearea elementelor de navigare în pagini web</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Acasă</a></li>
+                <li><a href="../../labs/lab1/point1.html">1. Inserarea blocurilor de text</a></li>
+                <li><a href="../../labs/lab1/point2.html">2. Inserarea listelor</a></li>
+                <li><a href="../../labs/lab1/point3.html">3. Inserarea referințelor</a></li>
+                <li><a href="../../labs/lab1/point4.html">4. Inserarea imaginilor</a></li>
+                <li><a href="../../labs/lab1/point5.html">5. Inserarea elementelor multimedia</a></li>
+                <li><a href="../../labs/lab1/point6.html">6. Inserarea cadrelor interne</a></li>
+                <li><a href="../../labs/lab1/point7.html">7. Inserarea tabelelor</a></li>
+                <li><a href="../../labs/lab1/point8.html">8. Inserarea formularelor</a></li>
+                <li><a href="../../labs/lab1/point9.html">9. Formatarea blocurilor de text</a></li>
+                <li><a href="../../labs/lab1/point10.html">10. Poziționarea elementelor</a></li>
+                <li><a href="../../labs/lab1/point11.html">11. Utilizare pseudo-clase și pseudo-elemente</a></li>
+                <li><a href="../../labs/lab1/point12.html">12. Formatarea elementelor multimedia</a></li>
+                <li><a href="../../labs/lab1/point13.html">13. Crearea elementelor de navigare</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exemplu de creare a elementelor de navigare în pagini web</h2>
+            <p>În acest laborator, vom explora cum să creăm și să stilizăm elemente de navigare într-o pagină web, utilizând linkuri, liste neordonate și stiluri CSS.</p>
+
+            <h3>Cod demonstrativ:</h3>
+            <p>Mai jos este un exemplu de creare a unui meniu de navigare:</p>
+
+            <!-- CodePen Embed -->
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="azoXRyR" data-pen-title="Untitled" data-user="Bargan-Mihai-the-bashful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-bashful/pen/azoXRyR">
+                Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-bashful">@Bargan-Mihai-the-bashful</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+            <h3>Explicație:</h3>
+            <p>Acesta este un exemplu de meniu de navigare folosind liste neordonate și linkuri. Am aplicat stiluri CSS pentru a crea un design simplu și intuitiv pentru elementele de navigare.</p>
+            <ul>
+                <li><strong>Acasă:</strong> Meniul de bază pentru pagina principală.</li>
+                <li><strong>Laborator 1:</strong> Selecție a punctelor din primul laborator.</li>
+                <li><strong>Linkuri de navigare:</strong> Permite utilizatorului să navigheze prin diferitele puncte ale laboratorului.</li>
+            </ul>
+        </section>
+
+        <!-- Dropdown to select points -->
+        <div class="dropdown">
+            <select id="taskDropdown" onchange="window.location.href=this.value">
+                <option value="#">Selectează un punct</option>
+                <option value="point1.html">1. Inserarea blocurilor de text</option>
+                <option value="point2.html">2. Inserarea listelor</option>
+                <option value="point3.html">3. Inserarea referințelor</option>
+                <option value="point4.html">4. Inserarea imaginilor</option>
+                <option value="point5.html">5. Inserarea elementelor multimedia</option>
+                <option value="point6.html">6. Inserarea cadrelor interne</option>
+                <option value="point7.html">7. Inserarea tabelelor</option>
+                <option value="point8.html">8. Inserarea formularelor</option>
+                <option value="point9.html">9. Formatarea blocurilor de text</option>
+                <option value="point10.html">10. Poziționarea elementelor</option>
+                <option value="point11.html">11. Utilizare pseudo-clase și pseudo-elemente</option>
+                <option value="point12.html">12. Formatarea elementelor multimedia</option>
+                <option value="point13.html">13. Crearea elementelor de navigare</option>
+            </select>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="window.location.href='point12.html'">Înapoi</button>
+            <button onclick="window.location.href='../../index.html'">Finalizare</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+    </footer>
+</body>
+</html>

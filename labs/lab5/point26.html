@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utilizarea Metodelor de Stocare a Datelor - Laborator 5</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Utilizarea Metodelor de Stocare a Datelor</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introducere</h2>
+      <p>În această pagină, vom explora diferitele metode de stocare a datelor în aplicațiile web și cum să utilizăm fiecare dintre acestea.</p>
+
+      <h3>Metoda 1: <code>localStorage</code></h3>
+      <p><code>localStorage</code> permite stocarea de date în browser, iar datele rămân disponibile chiar și după închiderea browserului.</p>
+      <pre>
+        // Stocarea datelor
+        localStorage.setItem('username', 'Mihai');
+
+        // Recuperarea datelor
+        const username = localStorage.getItem('username');
+        console.log(username);  // Mihai
+      </pre>
+
+      <h3>Metoda 2: <code>sessionStorage</code></h3>
+      <p><code>sessionStorage</code> stochează date doar pentru durata sesiunii curente a utilizatorului (se șterge când se închide fereastra).</p>
+      <pre>
+        // Stocarea datelor
+        sessionStorage.setItem('sessionID', '12345');
+
+        // Recuperarea datelor
+        const sessionID = sessionStorage.getItem('sessionID');
+        console.log(sessionID);  // 12345
+      </pre>
+
+      <h3>Metoda 3: <code>Cookies</code></h3>
+      <p>Cookie-urile sunt folosite pentru stocarea unor informații care pot fi trimise către server cu fiecare cerere.</p>
+      <pre>
+        // Setarea unui cookie
+        document.cookie = "user=John; expires=" + new Date(2025, 1, 20).toUTCString();
+      </pre>
+
+      <h3>Metoda 4: <code>IndexedDB</code></h3>
+      <p><code>IndexedDB</code> este o metodă avansată de stocare a datelor complexe, potrivită pentru aplicațiile care necesită stocarea unor cantități mari de date.</p>
+      <pre>
+        // Exemplu de utilizare a IndexedDB
+        let request = indexedDB.open("myDatabase", 1);
+        request.onsuccess = function(event) {
+            let db = event.target.result;
+            let transaction = db.transaction("myStore", "readwrite");
+            let store = transaction.objectStore("myStore");
+            store.add({ name: "Mihai", age: 18 });
+        };
+      </pre>
+
+      <h3>Metoda 5: Stocarea pe Server</h3>
+      <p>În aplicațiile reale, datele sunt adesea stocate pe un server folosind o bază de date externă, accesată prin API-uri.</p>
+    </section>
+
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point25.html">25. Pagini web de gestionare a obiectelor modelului BOM</option>
+        <option value="point24.html">24. Pagini web cu verificarea datelor din formular</option>
+        <option value="point26.html" selected>26. Pagini web cu utilizarea metodelor de stocare a datelor</option>
+      </select>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="window.location.href='point25.html'">Înapoi</button>
+      <button onclick="window.location.href='../../index.html'">Finalizare</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

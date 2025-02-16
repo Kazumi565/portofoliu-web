@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificarea Datelor din Formular - Laborator 5</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Verificarea Datelor din Formular</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Crearea unui formular cu verificare a datelor</h2>
+      <p>În acest exemplu, vom explora cum să creăm un formular HTML și să validăm datele acestuia folosind JavaScript. Scopul este de a asigura că datele sunt corecte înainte de a fi trimise pe server.</p>
+
+      <h3>Explicație:</h3>
+      <p>Un formular HTML poate fi creat cu ușurință folosind elementele <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> și altele. Însă pentru a prelua datele dintr-un formular, există mai multe metode, iar în proiectele mari, acest lucru este de obicei gestionat de un backend care prelucrează datele. Având în vedere că acest laborator este mai axat pe partea de frontend, am ales să folosim un serviciu terț numit <strong>Formspree</strong>, care se ocupă de trimiterea și gestionarea formularelor fără a fi nevoie de un backend complex.</p>
+      
+      <h4>Pașii pentru crearea unui formular cu Formspree:</h4>
+      <ol>
+        <li>Înregistrați-vă pe [Formspree](https://formspree.io/), creând un cont nou.</li>
+        <li>Verificați-vă adresa de email. Aceasta va fi adresa unde vor ajunge toate trimiterele formularului.</li>
+        <li>După autentificare, creați un formular nou în contul Formspree. Veți primi un ID unic pentru formularul respectiv.</li>
+        <li>După ce formularul este creat, integrați-l într-o pagină HTML folosind codul furnizat de Formspree.</li>
+      </ol>
+
+      <h4>Ce se întâmplă după integrarea formularului?</h4>
+      <p>După ce ați creat formularul pe Formspree și l-ați integrat în pagina HTML, utilizatorul poate completa formularul cu datele necesare (de exemplu, nume, email și mesaj). Când formularul este trimis, serviciul Formspree preia aceste date și le trimite direct pe emailul pe care l-ați configurat. Astfel, nu mai aveți nevoie de un backend pentru a procesa datele utilizatorului.</p>
+
+      <p>De exemplu, când un utilizator trimite un mesaj prin formular, acest mesaj ajunge direct la adresa de email asociată contului Formspree. Puteți vizualiza și gestiona trimiterea formularelor prin intermediul panoului de administrare Formspree.</p>
+
+      <h4>Exemplu de formular cu Formspree:</h4>
+      <p>Mai jos este un formular de contact simplu care validează datele înainte de trimitere:</p>
+
+      <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MYWwNBj" data-pen-title="Verificare Formular" data-user="Bargan-Mihai-the-reactor" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-reactor/pen/MYWwNBj">Verificare Formular</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-reactor">@Bargan-Mihai-the-reactor</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+      <h4>Ce se întâmplă în continuare?</h4>
+      <p>După validarea cu succes a formularului, datele vor fi trimise la server sau la serviciul terț pentru prelucrare. În aplicațiile reale, aceasta ar putea însemna trimiterea unui email sau stocarea datelor într-o bază de date. În acest caz, validarea se face pe partea clientului pentru a îmbunătăți experiența utilizatorului.</p>
+
+    </section>
+
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point25.html">25. Pagini web de gestionare a obiectelor modelului BOM</option>
+        <option value="point26.html">26. Pagini web cu utilizarea metodelor de stocare a datelor</option>
+        <option value="point24.html" selected>24. Pagini web cu verificarea datelor din formular</option>
+      </select>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Înapoi</button>
+      <button onclick="window.location.href='point25.html'">Următorul</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagini web cu expresii ale limbajului de scriptare - Laborator 2</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Pagini web cu expresii ale limbajului de scriptare</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Exemplu de integrare a expresiilor de scriptare</h2>
+      <p>
+        Acest exemplu arată cum poți utiliza expresii ale limbajului de scriptare pentru a genera conținut dinamic într-o pagină web. Vom folosi PHP pentru a insera un mesaj personalizat în cadrul HTML-ului.
+      </p>
+      
+      <h3>Cod demonstrativ:</h3>
+      <pre><code>
+&lt;?php
+  // Setăm o variabilă cu un mesaj
+  $salut = "lumea";
+  
+  // Afișăm un titlu dinamic
+  echo "&lt;h1&gt;Salut, $salut!&lt;/h1&gt;";
+?&gt;
+      </code></pre>
+      
+      <h3>Explicație:</h3>
+      <p>
+        În exemplul de mai sus, codul PHP este inclus între tag-urile <code>&lt;?php</code> și <code>?&gt;</code>. Variabila <code>$salut</code> este setată cu textul <em>"lumea"</em>, iar funcția <code>echo</code> este folosită pentru a insera în pagină un tag HTML <code>&lt;h1&gt;</code> care afișează mesajul "Salut, lume!".
+      </p>
+      <p>
+        Astfel, dacă fișierul este procesat de un server web cu suport PHP, rezultatul va fi o pagină web dinamică în care conținutul poate fi modificat de logica din spatele codului. Această metodă este esențială pentru crearea de site-uri dinamice care se adaptează în funcție de datele introduse, utilizator sau alte condiții de mediu.
+      </p>
+      <p>
+        Reține că pentru ca acest cod să funcționeze corect, fișierul trebuie să fie salvat cu extensia <code>.php</code> și să fie rulat pe un server care interpretează PHP.
+      </p>
+    </section>
+    
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point14.html">14. Machetarea responsivă a paginii web</option>
+        <option value="point15.html">15. Publicarea paginilor web</option>
+        <option value="point16.html" selected>16. Pagini web cu expresii ale limbajului de scriptare</option>
+        <option value="point17.html">17. Instrucțiuni decizionale</option>
+      </select>
+    </div>
+    
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='point15.html'">Înapoi</button>
+      <button onclick="window.location.href='point17.html'">Următorul</button>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserarea referințelor în pagini web - Laborator 1</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Inserarea referințelor în pagini web</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Acasă</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exemplu de referințe în paginile web</h2>
+            <p>În această secțiune, vom învăța cum să inserăm diferite tipuri de referințe în paginile web.</p>
+
+            <!-- External link -->
+            <h3>Exemplu de referință externă:</h3>
+            <p>Vizitează <a href="https://www.example.com" target="_blank">Example.com</a> pentru mai multe informații.</p>
+
+            <!-- Internal link (link to another page within the site) -->
+            <h3>Exemplu de referință internă:</h3>
+            <p>Înapoi la <a href="../../index.html">pagina principală</a> a site-ului.</p>
+
+            <!-- Link to another point in the same lab -->
+            <h3>Link către alt punct din laboratorul 1:</h3>
+            <p>Mergeți la <a href="point2.html">Punctul 2 din Laboratorul 1</a> pentru mai multe informații.</p>
+
+            <!-- Email link -->
+            <h3>Exemplu de referință pentru e-mail:</h3>
+            <p>Trimiteți un e-mail la <a href="mailto:example@example.com">example@example.com</a> pentru întrebări.</p>
+
+            <!-- Embed the CodePen -->
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="LEPqExQ" data-pen-title="Untitled" data-user="Bargan-Mihai-the-bashful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-bashful/pen/LEPqExQ">
+                Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-bashful">@Bargan-Mihai-the-bashful</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="window.location.href='point2.html'">Înapoi</button>
+                <button onclick="window.location.href='point4.html'">Următorul</button>
+            </div>
+
+            <!-- Dropdown to select points -->
+            <div class="dropdown">
+                <select id="taskDropdown" onchange="window.location.href=this.value">
+                    <option value="#">Selectează un punct</option>
+                    <option value="point1.html">1. Inserarea blocurilor de text</option>
+                    <option value="point2.html">2. Inserarea listelor</option>
+                    <option value="point3.html">3. Inserarea referințelor</option>
+                    <option value="point4.html">4. Inserarea imaginilor</option>
+                    <option value="point5.html">5. Inserarea elementelor multimedia</option>
+                    <option value="point6.html">6. Inserarea cadrelor interne</option>
+                    <option value="point7.html">7. Inserarea tabelelor</option>
+                    <option value="point8.html">8. Inserarea formularelor</option>
+                    <option value="point9.html">9. Formatarea blocurilor de text</option>
+                    <option value="point10.html">10. Poziționarea elementelor</option>
+                    <option value="point11.html">11. Utilizare pseudo-clase și pseudo-elemente</option>
+                    <option value="point12.html">12. Formatarea elementelor multimedia</option>
+                    <option value="point13.html">13. Crearea elementelor de navigare</option>
+                </select>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+    </footer>
+</body>
+</html>

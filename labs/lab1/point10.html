@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poziționarea elementelor în pagini web - Laborator 10</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Poziționarea elementelor în pagini web</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Acasă</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exemplu de poziționare a elementelor folosind CSS</h2>
+            <p>În acest laborator, vom explora utilizarea diferitelor metode de poziționare a elementelor într-o pagină web folosind CSS, cum ar fi <code>absolute</code>, <code>relative</code>, <code>fixed</code>, și <code>sticky</code>.</p>
+
+            <h3>Cod demonstrativ:</h3>
+            <p>Mai jos este un exemplu de utilizare a poziționării elementelor într-un container:</p>
+
+            <!-- CodePen Embed -->
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qEWgMGK" data-pen-title="Untitled" data-user="Bargan-Mihai-the-bashful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-bashful/pen/qEWgMGK">
+                Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-bashful">@Bargan-Mihai-the-bashful</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+            <h3>Explicație:</h3>
+            <p>În acest exemplu, avem patru elemente poziționate într-un container utilizând proprietăți CSS de poziționare absolută și relativă. Fiecare element are o poziționare diferită care arată modul în care funcționează poziționarea absolută și relativă în cadrul unui element părinte.</p>
+            <ul>
+                <li><strong>top-left:</strong> Poziționează elementul în colțul din stânga sus al containerului.</li>
+                <li><strong>top-right:</strong> Poziționează elementul în colțul din dreapta sus al containerului.</li>
+                <li><strong>bottom-left:</strong> Poziționează elementul în colțul din stânga jos al containerului.</li>
+                <li><strong>bottom-right:</strong> Poziționează elementul în colțul din dreapta jos al containerului.</li>
+                <li><strong>center:</strong> Poziționează elementul exact în mijlocul containerului.</li>
+            </ul>
+        </section>
+
+        <!-- Dropdown to select points -->
+        <div class="dropdown">
+            <select id="taskDropdown" onchange="window.location.href=this.value">
+                <option value="#">Selectează un punct</option>
+                <option value="point1.html">1. Inserarea blocurilor de text</option>
+                <option value="point2.html">2. Inserarea listelor</option>
+                <option value="point3.html">3. Inserarea referințelor</option>
+                <option value="point4.html">4. Inserarea imaginilor</option>
+                <option value="point5.html">5. Inserarea elementelor multimedia</option>
+                <option value="point6.html">6. Inserarea cadrelor interne</option>
+                <option value="point7.html">7. Inserarea tabelelor</option>
+                <option value="point8.html">8. Inserarea formularelor</option>
+                <option value="point9.html">9. Formatarea blocurilor de text</option>
+                <option value="point10.html">10. Poziționarea elementelor</option>
+                <option value="point11.html">11. Utilizare pseudo-clase și pseudo-elemente</option>
+                <option value="point12.html">12. Formatarea elementelor multimedia</option>
+                <option value="point13.html">13. Crearea elementelor de navigare</option>
+            </select>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="window.location.href='point9.html'">Înapoi</button>
+            <button onclick="window.location.href='point11.html'">Următorul</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+    </footer>
+</body>
+</html>

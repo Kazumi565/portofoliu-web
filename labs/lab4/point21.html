@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagini web de prelucrarea a tablourilor - Laborator 4</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Pagini web de prelucrarea a tablourilor</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Exemplu de pagină pentru prelucrarea tablourilor în JavaScript</h2>
+      <p>
+        Acest exemplu arată cum poți manipula un tablou de numere în JavaScript. Funcționalitățile incluse sunt:
+      </p>
+      <ul>
+        <li>Sortarea unui tablou de numere.</li>
+        <li>Adăugarea unui element într-un tablou.</li>
+        <li>Ștergerea unui element dintr-un tablou.</li>
+        <li>Filtrarea elementelor unui tablou pe baza unei condiții.</li>
+      </ul>
+      <p>Apasă pe butonul de mai jos pentru a vedea rezultatele acestor operațiuni.</p>
+
+      <!-- Embed CodePen Example -->
+      <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="XJWbvbX" data-pen-title="Untitled" data-user="Bargan-Mihai-the-reactor" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-reactor/pen/XJWbvbX">
+        Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-reactor">@Bargan-Mihai-the-reactor</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+    </section>
+
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point21.html" selected>21. Pagini web de prelucrarea a tablourilor</option>
+        <option value="point22.html">22. Pagini web cu utilizarea evenimentelor mouse-ului, tastaturii, ferestrei browser-ului</option>
+        <option value="point23.html">23. Scripturi client-side pentru definirea comportamentului elementelor dintr-un document web</option>
+      </select>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Înapoi</button>
+      <button onclick="window.location.href='point22.html'">Următorul</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

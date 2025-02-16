@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicarea paginilor web - Laborator 2</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Publicarea paginilor web</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Publicarea paginilor web</h2>
+      <p>Publicarea unui website presupune ca acesta să fie accesibil pe internet. Acest proces implică două componente principale:</p>
+      <ol>
+        <li>
+          <strong>Achiziționarea unui domeniu:</strong>  
+          Domeniul este adresa web la care utilizatorii vor accesa site-ul tău (de exemplu, <em>exemplu.com</em>). Domeniile se pot achiziționa prin intermediul unor servicii specializate precum GoDaddy, Namecheap sau alți registratori locali.
+        </li>
+        <li>
+          <strong>Hostingul website-ului:</strong>  
+          Hostingul este serviciul care stochează fișierele site-ului și le face accesibile pe internet. Alegerea metodei de hosting depinde de mărimea și complexitatea proiectului tău.
+        </li>
+      </ol>
+      
+      <h3>Metode de hosting:</h3>
+      <ul>
+        <li>
+          <strong>Shared Hosting:</strong>  
+          O soluție economică în care mai multe site-uri împart resursele aceluiași server. Ideal pentru site-uri mici sau proiecte personale.
+        </li>
+        <li>
+          <strong>Virtual Private Server (VPS):</strong>  
+          Oferă mai multe resurse și un control mai mare decât shared hosting, fiind totuși o soluție partajată prin intermediul virtualizării.
+        </li>
+        <li>
+          <strong>Dedicated Hosting:</strong>  
+          Ai întregul server la dispoziție. Aceasta este opțiunea ideală pentru site-uri cu trafic intens, dar este și mai costisitoare.
+        </li>
+        <li>
+          <strong>Cloud Hosting:</strong>  
+          Utilizează resurse distribuite pe mai multe servere din cloud (ex.: Amazon AWS, Google Cloud, Microsoft Azure). Această soluție este scalabilă și eficientă pentru proiecte care necesită flexibilitate.
+        </li>
+        <li>
+          <strong>Static Site Hosting:</strong>  
+          Pentru site-uri statice (HTML, CSS, JavaScript), servicii precum GitHub Pages, Netlify sau Vercel oferă opțiuni gratuite sau la costuri reduse, cu facilități de versionare și deploy automatizat.
+        </li>
+      </ul>
+      
+      <h3>Metode de publicare:</h3>
+      <p>
+        Există diverse tehnici pentru a publica un website:
+      </p>
+      <ul>
+        <li>
+          <strong>FTP/SFTP:</strong>  
+          Transferul fișierelor se poate realiza prin FTP sau, pentru o securitate sporită, prin SFTP. De exemplu, multe aplicații de hosting oferă fișiere de configurare pentru a stabili conexiunea.
+        </li>
+        <li>
+          <strong>Interfețe Web:</strong>  
+          Multe platforme de hosting, cum ar fi cPanel, oferă panouri de control web pentru încărcarea și administrarea fișierelor.
+        </li>
+        <li>
+          <strong>Deploy Automatizat:</strong>  
+          Utilizarea sistemelor de control al versiunilor (ex.: Git) împreună cu CI/CD (Continuous Integration/Continuous Deployment) permite publicarea automată a site-ului la fiecare actualizare.
+        </li>
+      </ul>
+      
+      <h3>Exemplu de configurare FTP:</h3>
+      <pre><code>
+{
+  "protocol": "ftp",
+  "host": "ftp.exemplu.com",
+  "username": "utilizator",
+  "password": "parola",
+  "port": 21,
+  "secure": false,
+  "passive": true
+}
+      </code></pre>
+      
+      <h3>Explicație:</h3>
+      <p>
+        Pentru a publica site-ul tău, trebuie să alegi un nume de domeniu reprezentativ și o metodă de hosting adecvată. Dacă proiectul este unul mic sau personal, shared hosting sau static site hosting ar putea fi suficiente. Pentru site-uri cu trafic intens sau aplicații dinamice, VPS, dedicated sau cloud hosting oferă performanță și scalabilitate superioare. Metodele de publicare variază de la transferul manual de fișiere prin FTP/SFTP la deploy-uri automate integrate în procesele de dezvoltare.
+      </p>
+    </section>
+    
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point14.html">14. Machetarea responsivă a paginii web</option>
+        <option value="point15.html" selected>15. Publicarea paginilor web</option>
+        <option value="point16.html">16. Pagini web cu expresii ale limbajului de scriptare</option>
+        <option value="point17.html">17. Instrucțiuni decizionale</option>
+      </select>
+    </div>
+    
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='point14.html'">Înapoi</button>
+      <button onclick="window.location.href='point16.html'">Următorul</button>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

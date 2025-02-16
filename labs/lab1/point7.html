@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserarea Tabelelor în Paginile Web - Laborator 7</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Inserarea Tabelelor în Paginile Web</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Acasă</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ce sunt tabelele și cum le inserăm?</h2>
+            <p>Tabelele sunt utilizate pentru a organiza informațiile într-un mod structurat pe paginile web. Ele pot conține rânduri și coloane care permit prezentarea datelor într-un format ușor de citit.</p>
+            <p>În acest exemplu, vom învăța cum să inserăm un tabel simplu folosind elementele HTML <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> și <code>&lt;td&gt;</code>.</p>
+
+            <h3>Codul demonstrativ:</h3>
+            <p>Mai jos este un exemplu de tabel simplu care afișează o listă cu nume și vârste:</p>
+            
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="VYZgGBB" data-pen-title="Inserarea Tabelelor" data-user="Bargan-Mihai-the-bashful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-bashful/pen/VYZgGBB">
+              Inserarea Tabelelor</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-bashful">@Bargan-Mihai-the-bashful</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+            <h3>Explicații:</h3>
+            <ul>
+                <li><code>&lt;table&gt;</code>: Creează un tabel.</li>
+                <li><code>&lt;thead&gt;</code>: Conține capul tabelului, adică denumirile coloanelor.</li>
+                <li><code>&lt;tbody&gt;</code>: Conține corpul tabelului, adică rândurile de date.</li>
+                <li><code>&lt;tr&gt;</code>: Reprezintă un rând din tabel.</li>
+                <li><code>&lt;th&gt;</code>: Reprezintă o celulă de antet (cap de tabel). Acesta este de obicei îngroșat și aliniat la centru.</li>
+                <li><code>&lt;td&gt;</code>: Reprezintă o celulă din corpul tabelului (datele propriu-zise).</li>
+            </ul>
+
+    
+        </section>
+
+        <!-- Dropdown to select points -->
+        <div class="dropdown">
+            <select id="taskDropdown" onchange="window.location.href=this.value">
+                <option value="#">Selectează un punct</option>
+                <option value="point1.html">1. Inserarea blocurilor de text</option>
+                <option value="point2.html">2. Inserarea listelor</option>
+                <option value="point3.html">3. Inserarea referințelor</option>
+                <option value="point4.html">4. Inserarea imaginilor</option>
+                <option value="point5.html">5. Inserarea elementelor multimedia</option>
+                <option value="point6.html">6. Inserarea cadrelor interne</option>
+                <option value="point7.html">7. Inserarea tabelelor</option>
+                <option value="point8.html">8. Inserarea formularelor</option>
+                <option value="point9.html">9. Formatarea blocurilor de text</option>
+                <option value="point10.html">10. Poziționarea elementelor</option>
+                <option value="point11.html">11. Utilizare pseudo-clase și pseudo-elemente</option>
+                <option value="point12.html">12. Formatarea elementelor multimedia</option>
+                <option value="point13.html">13. Crearea elementelor de navigare</option>
+            </select>
+        </div>
+        
+        <div class="nav-buttons">
+            <button onclick="window.location.href='point6.html'">Înapoi</button>
+            <button onclick="window.location.href='point8.html'">Următorul</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+    </footer>
+</body>
+</html>

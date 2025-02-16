@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripturi Client-Side pentru Comportamentul Elementelor - Laborator 4</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Scripturi Client-Side pentru Comportamentul Elementelor</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Descrierea Minijocului Drag-and-Drop</h2>
+      <p>În acest exemplu, vom demonstra cum să folosim JavaScript pentru a manipula elementele paginii și a crea un minijoc simplu de tip drag-and-drop. Scopul jocului este de a plasa cuvintele în categoria corectă, iar la final, utilizatorul va primi un mesaj de felicitare.</p>
+
+      <h3>Explicație JavaScript:</h3>
+      <p>În acest exemplu, am folosit JavaScript pentru a crea un comportament interactiv al paginii. Mai exact, am implementat un minijoc în care utilizatorii trebuie să tragă cuvintele în categoriile corecte. Iată cum funcționează:</p>
+      <ul>
+        <li><strong>Permisibilitatea plasării elementelor (allowDrop):</strong> Când un element este tras pe o zonă validă (o categorie), folosim metoda <code>event.preventDefault()</code> pentru a permite browser-ului să accepte acel element.</li>
+        <li><strong>Inițierea transferului de date (drag):</strong> Când un utilizator apasă pe un cuvânt pentru a-l trage, folosim evenimentul <code>dragstart</code> pentru a salva datele elementului tras (ID-ul acestuia). Aceste date vor fi folosite ulterior pentru a plasa elementul în categoria corectă.</li>
+        <li><strong>Plasarea elementului în categoria corectă (drop):</strong> Când utilizatorul trage un cuvânt într-o categorie, folosim evenimentul <code>drop</code> pentru a adăuga cuvântul în acea categorie și pentru a verifica dacă plasarea a fost corectă. Dacă toate cuvintele sunt plasate corect, un mesaj de felicitare este afișat.</li>
+      </ul>
+
+      <h3>Exemplu live:</h3>
+      <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="JojdgEJ" data-pen-title="Untitled" data-user="Bargan-Mihai-the-reactor" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-reactor/pen/JojdgEJ">Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-reactor">@Bargan-Mihai-the-reactor</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+    </section>
+
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point21.html">21. Pagini web de prelucrarea a tablourilor</option>
+        <option value="point22.html">22. Pagini web cu utilizarea evenimentelor mouse-ului, tastaturii, ferestrei browser-ului</option>
+        <option value="point23.html" selected>23. Scripturi client-side pentru definirea comportamentului elementelor dintr-un document web</option>
+      </select>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Înapoi</button>
+      <button onclick="window.location.href='../../index.html'">Finalizare</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

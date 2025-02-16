@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserarea listelor - Laborator 1</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Inserarea Listelor în Pagini Web</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Acasă</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exemplu de inserare a listelor în pagini web</h2>
+            <p>În acest punct, vom explora cum să inserăm liste (ordonate și neordonate) într-o pagină web, folosind HTML și CSS.</p>
+
+            <h3>Cod demonstrativ:</h3>
+            <p>Mai jos este un exemplu de utilizare a listelor:</p>
+
+            <!-- CodePen Embed -->
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qEWgEdX" data-pen-title="Untitled" data-user="Bargan-Mihai-the-bashful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-bashful/pen/qEWgEdX">Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-bashful">@Bargan-Mihai-the-bashful</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+            <h3>Explicație:</h3>
+            <p>În acest exemplu, vom crea o listă neordonată și una ordonată. Vom folosi tagurile <code>&lt;ul&gt;</code> și <code>&lt;ol&gt;</code> pentru listele neordonate și ordonate, iar pentru fiecare element din listă, vom utiliza <code>&lt;li&gt;</code>.</p>
+            <ul>
+                <li><strong>Listă neordonată:</strong> O listă care nu are ordine anume a elementelor.</li>
+                <li><strong>Listă ordonată:</strong> O listă unde elementele sunt numerotate.</li>
+            </ul>
+        </section>
+
+        <!-- Dropdown to select lab point -->
+        <div class="dropdown">
+            <label for="lab-points">Alege punctul din laborator:</label>
+            <select id="lab-points" onchange="window.location.href=this.value;">
+                <option value="point1.html">Punctul 1</option>
+                <option value="point2.html" selected>Punctul 2</option>
+                <option value="point3.html">Punctul 3</option>
+                <option value="point4.html">Punctul 4</option>
+                <option value="point5.html">Punctul 5</option>
+                <option value="point6.html">Punctul 6</option>
+                <!-- Add more points as needed -->
+            </select>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="window.location.href='point1.html'">Înapoi la Punctul 1</button>
+            <button onclick="window.location.href='point3.html'">Următorul Punct</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evenimente în paginile web - Laborator 4</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Evenimente în paginile web</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Evenimente în paginile web</h2>
+      <p>În acest exemplu vom demonstra cum să utilizăm evenimentele de mouse, tastatură și fereastră în JavaScript.</p>
+
+      <h3>Eveniment Mouse:</h3>
+      <p id="mouseEvent">Mișcați mouse-ul pe această pagină pentru a înregistra coordonatele.</p>
+
+      <h3>Eveniment Tastatură:</h3>
+      <p id="keyboardEvent">Apăsați o tastă pentru a înregistra codul tastaturii.</p>
+
+      <h3>Eveniment Fereastră:</h3>
+      <p id="windowEvent">Redimensionați fereastra browser-ului pentru a înregistra dimensiunile ferestrei.</p>
+
+      <h3>Exemplu live:</h3>
+      <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MYWwNKY" data-pen-title="Untitled" data-user="Bargan-Mihai-the-reactor" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-reactor/pen/MYWwNKY">Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-reactor">@Bargan-Mihai-the-reactor</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+    </section>
+
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point21.html">21. Pagini web de prelucrarea a tablourilor</option>
+        <option value="point22.html" selected>22. Pagini web cu utilizarea evenimentelor mouse-ului, tastaturii, ferestrei browser-ului</option>
+        <option value="point23.html">23. Scripturi client-side pentru definirea comportamentului elementelor dintr-un document web</option>
+      </select>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Înapoi</button>
+      <button onclick="window.location.href='point23.html'">Următorul</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

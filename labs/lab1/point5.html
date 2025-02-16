@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserarea elementelor multimedia - Laborator 5</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Inserarea elementelor multimedia</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Acasă</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Cat Coding Gif</h2>
+            <p>Me writing the code for lucrari de laborator</p>
+
+            <div class="coding-container">
+                <div class="coding-screen" id="code">
+                    <!-- Code will appear here -->
+                </div>                
+                <div class="cat">
+                    <img src="../../images/cat.gif" alt="Cat typing">
+                </div>
+            </div>            
+        </section>
+
+        <!-- Dropdown to select points -->
+        <div class="dropdown">
+            <select id="taskDropdown" onchange="window.location.href=this.value">
+                <option value="#">Selectează un punct</option>
+                <option value="point1.html">1. Inserarea blocurilor de text</option>
+                <option value="point2.html">2. Inserarea listelor</option>
+                <option value="point3.html">3. Inserarea referințelor</option>
+                <option value="point4.html">4. Inserarea imaginilor</option>
+                <option value="point5.html">5. Inserarea elementelor multimedia</option>
+                <option value="point6.html">6. Inserarea cadrelor interne</option>
+                <option value="point7.html">7. Inserarea tabelelor</option>
+                <option value="point8.html">8. Inserarea formularelor</option>
+                <option value="point9.html">9. Formatarea blocurilor de text</option>
+                <option value="point10.html">10. Poziționarea elementelor</option>
+                <option value="point11.html">11. Utilizare pseudo-clase și pseudo-elemente</option>
+                <option value="point12.html">12. Formatarea elementelor multimedia</option>
+                <option value="point13.html">13. Crearea elementelor de navigare</option>
+            </select>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="window.location.href='point4.html'">Înapoi</button>
+            <button onclick="window.location.href='point6.html'">Următorul</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+    </footer>
+</body>
+</html>

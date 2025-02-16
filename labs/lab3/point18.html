@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagini web cu instrucțiuni repetitive - Laborator 3</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Pagini web cu instrucțiuni repetitive</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Exemplu de pagină cu instrucțiuni repetitive</h2>
+      <p>
+        Acest exemplu demonstrează utilizarea instrucțiunilor repetitive pentru a genera un tabel înmulțirii pe o pagină web.
+      </p>
+
+      <h3>Codul demonstrativ:</h3>
+      <p>Utilizăm HTML, CSS și JavaScript pentru a crea această funcționalitate.</p>
+
+      <h3>Explicație:</h3>
+      <p>
+        În acest exemplu, folosim JavaScript pentru a prelua un număr introdus de utilizator și a genera un tabel al înmulțirii dinamic. Iată cum funcționează scriptul:
+      </p>
+      <ul>
+        <li><strong>Obținerea numărului introdus:</strong> Folosim <code>document.getElementById("numar").value</code> pentru a prelua valoarea introdusă de utilizator într-un câmp de tip <code>&lt;input&gt;</code> cu id-ul "numar".</li>
+        <li><strong>Validarea numărului:</strong> Înainte de a genera tabelul, verificăm dacă numărul introdus este valid:
+          <ul>
+            <li>Verificăm dacă câmpul nu este gol <code>numar === ""</code>.</li>
+            <li>Verificăm dacă input-ul este un număr folosind <code>isNaN(numar)</code>.</li>
+            <li>Verificăm dacă numărul se află între 1 și 20 (pentru a preveni valori prea mari sau prea mici).</li>
+          </ul>
+          Dacă input-ul nu este valid, afișăm un mesaj de alertă.
+        </li>
+        <li><strong>Generarea tabelului:</strong> Dacă numărul este valid, folosim o buclă <code>for</code> pentru a parcurge valorile de la 1 la 10 și pentru a calcula produsul numărului introdus de utilizator cu fiecare valoare. La fiecare iterație, creăm un element <code>&lt;li&gt;</code> cu rezultatul înmulțirii și îl adăugăm în lista de rezultate folosind <code>rezultat.appendChild(element)</code>.</li>
+      </ul>
+      <p>
+        Rezultatul este un tabel cu înmulțirile corespunzătoare, afișat dinamic pe pagină sub forma unei liste <code>&lt;ul&gt;</code>.
+      </p>
+
+      <h3>Codul sursă:</h3>
+      <p>
+        Codul HTML, CSS și JavaScript pentru acest exemplu este integrat în secțiunile corespunzătoare ale acestui site. Mai jos aveți un exemplu în CodePen:
+      </p>
+
+      <!-- Embed CodePen Example -->
+      <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="GgRJbYO" data-pen-title="Untitled" data-user="Bargan-Mihai-the-reactor" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-reactor/pen/GgRJbYO">
+        Untitled</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-reactor">@Bargan-Mihai-the-reactor</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+    </section>
+
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point18.html" selected>18. Pagini web cu instrucțiuni repetitive</option>
+        <option value="point19.html">19. Pagini web cu utilizarea funcțiunilor</option>
+        <option value="point20.html">20. Pagini web cu obiectele Number, Math, Boolean, String</option>
+      </select>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Înapoi</button>
+      <button onclick="window.location.href='point19.html'">Următorul</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

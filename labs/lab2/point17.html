@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrucțiuni decizionale - Laborator 2</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Instrucțiuni decizionale în JavaScript</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Ce sunt instrucțiunile decizionale?</h2>
+      <p>Instrucțiunile decizionale permit unui program să ia decizii pe baza anumitor condiții. În JavaScript, cele mai comune instrucțiuni sunt:</p>
+      <ul>
+        <li><code>if</code> – execută un bloc de cod dacă o condiție este adevărată.</li>
+        <li><code>if-else</code> – execută un bloc de cod dacă condiția este adevărată și un altul dacă este falsă.</li>
+        <li><code>else if</code> – permite mai multe condiții alternative.</li>
+        <li><code>switch</code> – este utilizat pentru a compara o valoare cu mai multe cazuri.</li>
+      </ul>
+
+      <h2>Exemplu interactiv</h2>
+      <p>Mai jos este un exemplu care afișează un mesaj diferit în funcție de ora curentă:</p>
+
+      <ul>
+        <li>Dacă ora este mai mică de 12:00, se afișează mesajul „Bună dimineața!”</li>
+        <li>Dacă ora este între 12:00 și 18:00, se afișează mesajul „Bună ziua!”</li>
+        <li>Dacă ora este mai mare de 18:00, se afișează mesajul „Bună seara!”</li>
+      </ul>
+
+      <p>Scriptul folosește obiectul <code>Date</code> pentru a obține ora curentă și apoi decide ce mesaj să afișeze pe pagină utilizând <code>if-else</code>.</p>
+
+      <h3>Vezi codul în acțiune:</h3>
+
+      <!-- Embed CodePen -->
+      <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="vEYOqRm" data-pen-title="Instrucțiuni Decizionale" data-user="Bargan-Mihai-the-reactor" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-reactor/pen/vEYOqRm">
+        Instrucțiuni Decizionale</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-reactor">@Bargan-Mihai-the-reactor</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+      <h2>Explicație cod</h2>
+      <p>
+        Scriptul JavaScript verifică ora curentă a sistemului și afișează un mesaj corespunzător:
+      </p>
+      <pre><code>
+let ora = new Date().getHours();
+
+if (ora < 12) {
+    console.log("Bună dimineața!");
+} else if (ora < 18) {
+    console.log("Bună ziua!");
+} else {
+    console.log("Bună seara!");
+}
+      </code></pre>
+      <p>
+        - Variabila <code>ora</code> stochează ora curentă.  
+        - Prima condiție (<code>if</code>) verifică dacă ora este mai mică de 12 și afișează "Bună dimineața!".  
+        - A doua condiție (<code>else if</code>) verifică dacă ora este între 12 și 18, afișând "Bună ziua!".  
+        - Dacă niciuna dintre condițiile anterioare nu este adevărată, se afișează "Bună seara!".  
+      </p>
+    </section>
+
+    <!-- Dropdown for point selection -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point14.html">14. Machetarea responsivă a paginii web</option>
+        <option value="point15.html">15. Publicarea paginilor web</option>
+        <option value="point16.html">16. Pagini web cu expresii ale limbajului de scriptare</option>
+        <option value="point17.html" selected>17. Instrucțiuni decizionale</option>
+      </select>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='point16.html'">Înapoi</button>
+      <button onclick="window.location.href='../../index.html'">Finalizare</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

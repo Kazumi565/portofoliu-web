@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionarea Obiectelor Modelului BOM - Laborator 5</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Gestionarea Obiectelor Modelului BOM</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Gestionarea Obiectelor Modelului BOM</h2>
+      <p>În această secțiune, vom explora cum să gestionăm obiectele din modelul BOM (Bill of Materials) folosind o aplicație web simplă. Vom crea un formular pentru a adăuga obiecte în lista BOM și vom putea vizualiza și șterge obiectele deja adăugate. Vom folosi JavaScript pentru a manipula aceste date dinamic pe pagină.</p>
+
+      <h3>Ce este BOM (Bill of Materials)?</h3>
+      <p>Modelul BOM (Bill of Materials) este o listă detaliată a materiilor prime, componentelor, subansamblelor, pieselor și cantităților necesare pentru fabricarea unui produs sau pentru a construi o structură complexă. BOM este utilizat pe scară largă în industrie, în special în fabricarea de produse, construcția de echipamente electronice, și chiar în gestionarea proiectelor de construcții.</p>
+      
+      <h3>Unde este utilizat BOM?</h3>
+      <p>BOM-ul este utilizat în multe industrii, inclusiv:</p>
+      <ul>
+        <li><strong>Fabricarea de produse:</strong> Un BOM detaliază toate piesele necesare pentru asamblarea unui produs final, cum ar fi o mașină sau un computer.</li>
+        <li><strong>Industria electronică:</strong> În producția de dispozitive electronice, BOM-ul este esențial pentru gestionarea componentelor electrice și a circuitelor.</li>
+        <li><strong>Construcția:</strong> În construcția de clădiri, BOM-ul ajută la urmărirea materialelor și pieselor necesare pentru construcție.</li>
+      </ul>
+      <p>În acest laborator, vom construi o aplicație simplă care simulează gestionarea unui BOM pentru un proiect de mică amploare, adăugând obiecte și cantități într-o listă și manipulând aceste date dinamic pe pagină.</p>
+
+      <h3>Cum funcționează aplicația?</h3>
+      <p>Aplicația noastră va permite utilizatorilor să adauge obiecte într-o listă BOM și să le vizualizeze. De asemenea, vom implementa opțiunea de a șterge obiectele deja adăugate. Vom folosi HTML pentru structura formularului, CSS pentru stilizarea paginii, și JavaScript pentru a manipula datele și a actualiza lista dinamic.</p>
+
+      <h4>Pașii pentru crearea aplicației</h4>
+      <ol>
+        <li><strong>Crearea formularului:</strong> Vom crea un formular simplu care va permite utilizatorilor să adauge obiecte în lista BOM, completând câmpurile pentru numele obiectului și cantitatea acestuia.</li>
+        <li><strong>Gestionarea obiectelor cu JavaScript:</strong> Vom folosi JavaScript pentru a colecta datele introduse de utilizatori, a le adăuga într-o listă și a le vizualiza pe pagină. De asemenea, vom implementa o funcție de ștergere pentru a elimina obiectele care nu mai sunt necesare.</li>
+        <li><strong>Actualizarea listei dinamic:</strong> Când utilizatorul adaugă un obiect, acesta va apărea imediat în lista vizibilă pe pagină, iar utilizatorul va putea șterge obiectele din listă cu un click.</li>
+      </ol>
+
+      <h4>Explicație detaliată a funcționalităților</h4>
+      <p>În această aplicație, am folosit un formular HTML simplu care colectează date despre obiectele BOM. Când utilizatorul trimite formularul, JavaScript preia valorile introduse pentru numele și cantitatea obiectului, le adaugă într-un array (listă) și actualizează pagina pentru a afișa lista actualizată de obiecte.</p>
+
+      <p>De asemenea, fiecare obiect din listă are un buton "Șterge" care, atunci când este apăsat, elimină obiectul respectiv din listă. Aceste funcționalități sunt gestionate printr-un cod JavaScript care manipulează DOM-ul paginii pentru a adăuga și elimina elemente vizibile.</p>
+
+      <h4>Codul JavaScript utilizat</h4>
+      <p>În acest exemplu, am folosit următoarele concepte în JavaScript:</p>
+      <ul>
+        <li><strong>Evenimente:</strong> Folosim un eveniment pentru a detecta atunci când utilizatorul trimite formularul și adaugă un obiect în listă.</li>
+        <li><strong>Manipularea DOM-ului:</strong> După adăugarea obiectului, folosim JavaScript pentru a crea un nou element în HTML și a-l adăuga în lista vizibilă pe pagină.</li>
+        <li><strong>Array:</strong> Obiectele sunt stocate într-un array și sunt gestionate dinamic pe măsură ce utilizatorul interacționează cu aplicația.</li>
+      </ul>
+
+      <h4>Formularul și lista în acțiune</h4>
+      <p>Mai jos veți găsi formularul nostru de adăugare a obiectelor și lista actualizată care conține obiectele adăugate. Pentru a vedea cum funcționează aplicația, utilizați formularul pentru a adăuga obiecte și observați cum se actualizează lista dinamic:</p>
+
+      <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="gbOpVJJ" data-pen-title="Gestionarea BOM" data-user="Bargan-Mihai-the-reactor" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-reactor/pen/gbOpVJJ">
+        Gestionarea BOM</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-reactor">@Bargan-Mihai-the-reactor</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+    </section>
+
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point24.html">24. Formular de contact cu verificare</option>
+        <option value="point26.html">26. Pagini web cu utilizarea metodelor de stocare a datelor</option>
+      </select>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Înapoi</button>
+      <button onclick="window.location.href='point26.html'">Următorul</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>

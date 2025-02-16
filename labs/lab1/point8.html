@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserarea Formularelor în Paginile Web - Laborator 8</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Inserarea Formularelor în Paginile Web</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Acasă</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ce sunt formularele și cum le inserăm?</h2>
+            <p>Formularele permit utilizatorilor să interacționeze cu site-urile web, oferind un mod de a trimite date, cum ar fi numele, email-ul, mesajele sau altele, către server. În acest exemplu, vom explora cum să creăm un formular simplu cu câmpuri de intrare, un textarea și un buton de trimitere folosind HTML.</p>
+            
+            <h3>Codul demonstrativ:</h3>
+            <p>Mai jos este un exemplu de formular care include câmpuri pentru nume, email, vârstă și un mesaj:</p>
+            
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="pvzGOQb" data-pen-title="Untitled" data-user="Bargan-Mihai-the-bashful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/Bargan-Mihai-the-bashful/pen/pvzGOQb">
+              Formular Simplu</a> by Bargan Mihai (<a href="https://codepen.io/Bargan-Mihai-the-bashful">@Bargan-Mihai-the-bashful</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+            <h3>Explicații:</h3>
+            <ul>
+                <li><code>&lt;form&gt;</code>: Creează un formular pe pagină. Acesta este elementul de bază care înconjoară toate câmpurile de intrare.</li>
+                <li><code>&lt;label&gt;</code>: Etichetele sunt folosite pentru a descrie fiecare câmp de intrare. Ele sunt utile pentru accesibilitate și ajută utilizatorii să înțeleagă ce trebuie să completeze.</li>
+                <li><code>&lt;input&gt;</code>: Câmpuri pentru introducerea de date, cum ar fi text, email sau număr. Atributele <code>type</code> sunt utilizate pentru a specifica ce tip de date sunt așteptate.</li>
+                <li><code>&lt;textarea&gt;</code>: Permite introducerea unui text mai lung decât câmpurile de intrare normale.</li>
+                <li><code>&lt;button&gt;</code>: Butonul de trimitere, care permite trimiterea formularului.</li>
+            </ul>
+
+            <p>Acest formular trimite datele la server, dar în exemplul nostru nu există un server care să le proceseze. Poți înlocui <code>action="#"</code> cu un URL pentru a direcționa datele către un server real.</p>
+        </section>
+
+        <!-- Dropdown to select points -->
+        <div class="dropdown">
+            <select id="taskDropdown" onchange="window.location.href=this.value">
+                <option value="#">Selectează un punct</option>
+                <option value="point1.html">1. Inserarea blocurilor de text</option>
+                <option value="point2.html">2. Inserarea listelor</option>
+                <option value="point3.html">3. Inserarea referințelor</option>
+                <option value="point4.html">4. Inserarea imaginilor</option>
+                <option value="point5.html">5. Inserarea elementelor multimedia</option>
+                <option value="point6.html">6. Inserarea cadrelor interne</option>
+                <option value="point7.html">7. Inserarea tabelelor</option>
+                <option value="point8.html">8. Inserarea formularelor</option>
+                <option value="point9.html">9. Formatarea blocurilor de text</option>
+                <option value="point10.html">10. Poziționarea elementelor</option>
+                <option value="point11.html">11. Utilizare pseudo-clase și pseudo-elemente</option>
+                <option value="point12.html">12. Formatarea elementelor multimedia</option>
+                <option value="point13.html">13. Crearea elementelor de navigare</option>
+            </select>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="window.location.href='point7.html'">Înapoi</button>
+            <button onclick="window.location.href='point9.html'">Următorul</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machetarea responsivă a paginii web - Laborator 2</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Machetarea responsivă a paginii web</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Acasă</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Exemplu de Machetare Responsivă</h2>
+      <p>În acest punct, vom explora cum putem implementa un design responsive folosind media queries în CSS. Această tehnică asigură că pagina se adaptează la diferite dimensiuni de ecran, îmbunătățind experiența utilizatorului pe dispozitive mobile.</p>
+
+      <h3>Cod demonstrativ:</h3>
+      <p>
+        /* Stilurile de bază pentru ecrane mari */ <br>
+        body { <br>
+        &nbsp;&nbsp;font-size: 16px; <br>
+        &nbsp;&nbsp;background-color: #333; <br>
+        &nbsp;&nbsp;color: white; <br>
+        } <br><br>
+
+        /* Media Query pentru ecrane mai mici de 600px */ <br>
+        @media only screen and (max-width: 600px) { <br>
+        &nbsp;&nbsp;body { <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #222; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px; <br>
+        &nbsp;&nbsp;} <br><br>
+        
+        &nbsp;&nbsp;header, nav, main, footer { <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px; <br>
+        &nbsp;&nbsp;} <br><br>
+        
+        &nbsp;&nbsp;nav ul { <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;align-items: center; <br>
+        &nbsp;&nbsp;} <br>
+        }
+      </p>
+
+      <h3>Explicație:</h3>
+      <p>În exemplul de mai sus:</p>
+      <ul>
+        <li><strong>Stiluri de bază:</strong> Se setează un font de 16px și un fundal de culoare gri închis pentru ecrane mai mari.</li>
+        <li><strong>Media Query:</strong> Pentru ecranele cu lățimea sub 600px, se schimbă culoarea de fundal la o nuanță mai închisă, se reduce dimensiunea fontului la 14px și se ajustează padding-ul pentru a îmbunătăți aspectul și lizibilitatea.</li>
+      </ul>
+    </section>
+
+    <!-- Dropdown pentru selectarea punctelor -->
+    <div class="dropdown">
+      <select id="taskDropdown" onchange="window.location.href=this.value">
+        <option value="#">Selectează un punct</option>
+        <option value="point14.html" selected>14. Machetarea responsivă a paginii web</option>
+        <option value="point15.html">15. Publicarea paginilor web</option>
+        <option value="point16.html">16. Pagini web cu expresii ale limbajului de scriptare</option>
+        <option value="point17.html">17. Pagini web cu instrucțiuni decizionale</option>
+      </select>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="window.location.href='../../labs/lab1/point13.html'">Înapoi</button>
+      <button onclick="window.location.href='point15.html'">Următorul</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofoliu pentru laborator - Bargan Mihai</p>
+  </footer>
+</body>
+</html>
