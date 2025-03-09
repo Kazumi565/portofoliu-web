@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Form with Extended Validation</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Dynamic styling for valid/invalid inputs */
+    input, textarea, select {
+      transition: border 0.3s ease;
+    }
+    input.invalid, textarea.invalid, select.invalid {
+      border: 2px solid red;
+    }
+    input.valid, textarea.valid, select.valid {
+      border: 2px solid green;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Form</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="date-time.html">Date & Time</a>
+      <a href="slideshow.html">Slideshow</a>
+    </nav>
+  </header>
+  <main>
+    <section id="contact">
+      <h2>Trimite-ne un mesaj</h2>
+      <form id="contact-form" novalidate>
+        <!-- Nume -->
+        <div class="form-group">
+          <label for="name">Nume:</label>
+          <input type="text" id="name" name="name" required />
+          <span class="error" id="name-error"></span>
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error" id="email-error"></span>
+        </div>
+        <!-- Telefon -->
+        <div class="form-group">
+          <label for="telephone">Telefon:</label>
+          <input type="text" id="telephone" name="telephone" required pattern="\d+" />
+          <span class="error" id="telephone-error"></span>
+        </div>
+        <!-- Dropdown pentru categorie -->
+        <div class="form-group">
+          <label for="category">Categorie:</label>
+          <select id="category" name="category" required>
+            <option value="">--Selectează o categorie--</option>
+            <option value="feedback">Feedback</option>
+            <option value="inquiry">Întrebare</option>
+            <option value="support">Suport</option>
+            <option value="other">Altele</option>
+          </select>
+          <span class="error" id="category-error"></span>
+        </div>
+        <!-- Radio buttons pentru metoda de contact -->
+        <div class="form-group">
+          <p>Metodă de contact preferată:</p>
+          <input type="radio" id="contact-email" name="contactMethod" value="email" required>
+          <label for="contact-email">Email</label>
+          <input type="radio" id="contact-phone" name="contactMethod" value="telefon" required>
+          <label for="contact-phone">Telefon</label>
+          <span class="error" id="contactMethod-error"></span>
+        </div>
+        <!-- Checkbox pentru acceptarea termenilor -->
+        <div class="form-group">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">Accept termenii și condițiile</label>
+          <span class="error" id="terms-error"></span>
+        </div>
+        <!-- Câmp opțional de încărcare a fișierelor -->
+        <div class="form-group">
+          <label for="fileUpload">Încarcă fișier (opțional):</label>
+          <input type="file" id="fileUpload" name="fileUpload">
+          <span class="error" id="fileUpload-error"></span>
+        </div>
+        <!-- Mesaj -->
+        <div class="form-group">
+          <label for="message">Mesaj:</label>
+          <textarea id="message" name="message" required></textarea>
+          <span class="error" id="message-error"></span>
+        </div>
+        <!-- Butoanele de trimitere și resetare -->
+        <button type="submit">Trimite</button>
+        <button type="reset" id="reset-btn">Resetează</button>
+      </form>
+      
+      <!-- Zonă de afișare a submisiunilor stocate -->
+      <div id="submissions">
+        <h3>Submisii stocate</h3>
+        <ul id="submission-list"></ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Integrated Web Design Projects</p>
+  </footer>
+  <script>
+    const form = document.getElementById('contact-form');
+    
+    // Helper function: validate field with dynamic styling
+    function validateField(field, errorElementId, validationFunc, errorMessage) {
+      const value = field.value.trim();
+      if (!validationFunc(value)) {
+        document.getElementById(errorElementId).textContent = errorMessage;
+        field.classList.add('invalid');
+        field.classList.remove('valid');
+        return false;
+      } else {
+        document.getElementById(errorElementId).textContent = "";
+        field.classList.remove('invalid');
+        field.classList.add('valid');
+        return true;
+      }
+    }
+    
+    // Real-time validation events
+    document.getElementById('name').addEventListener('input', function() {
+      validateField(this, 'name-error', val => val !== "", "Numele este obligatoriu.");
+    });
+    
+    document.getElementById('email').addEventListener('input', function() {
+      validateField(this, 'email-error', val => /^\S+@\S+\.\S+$/.test(val), "Te rog introdu un email valid.");
+    });
+    
+    document.getElementById('telephone').addEventListener('input', function() {
+      // Validăm că se introduc doar cifre
+      validateField(this, 'telephone-error', val => /^\d+$/.test(val), "Telefonul trebuie să conțină doar cifre.");
+    });
+    
+    document.getElementById('message').addEventListener('input', function() {
+      validateField(this, 'message-error', val => val !== "", "Mesajul este obligatoriu.");
+    });
+    
+    document.getElementById('category').addEventListener('change', function() {
+      validateField(this, 'category-error', val => val !== "", "Selectează o categorie.");
+    });
+    
+    // Validate radio buttons (check if at least one is selected)
+    function validateRadio(name, errorElementId, errorMessage) {
+      const radios = document.getElementsByName(name);
+      for (let radio of radios) {
+        if (radio.checked) {
+          document.getElementById(errorElementId).textContent = "";
+          return true;
+        }
+      }
+      document.getElementById(errorElementId).textContent = errorMessage;
+      return false;
+    }
+    
+    // Validate checkbox for terms
+    function validateCheckbox(id, errorElementId, errorMessage) {
+      const checkbox = document.getElementById(id);
+      if (!checkbox.checked) {
+        document.getElementById(errorElementId).textContent = errorMessage;
+        return false;
+      }
+      document.getElementById(errorElementId).textContent = "";
+      return true;
+    }
+    
+    // Handle form submission
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      let valid = true;
+      valid = validateField(document.getElementById('name'), 'name-error', val => val !== "", "Numele este obligatoriu.") && valid;
+      valid = validateField(document.getElementById('email'), 'email-error', val => /^\S+@\S+\.\S+$/.test(val), "Te rog introdu un email valid.") && valid;
+      valid = validateField(document.getElementById('telephone'), 'telephone-error', val => /^\d+$/.test(val), "Telefonul trebuie să conțină doar cifre.") && valid;
+      valid = validateField(document.getElementById('category'), 'category-error', val => val !== "", "Selectează o categorie.") && valid;
+      valid = validateField(document.getElementById('message'), 'message-error', val => val !== "", "Mesajul este obligatoriu.") && valid;
+      valid = validateRadio('contactMethod', 'contactMethod-error', "Selectează o metodă de contact.") && valid;
+      valid = validateCheckbox('terms', 'terms-error', "Trebuie să accepți termenii și condițiile.") && valid;
+      
+      if (valid) {
+        // Creare obiect submisie
+        const submission = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          telephone: document.getElementById('telephone').value,
+          category: document.getElementById('category').value,
+          contactMethod: document.querySelector('input[name="contactMethod"]:checked').value,
+          termsAccepted: document.getElementById('terms').checked,
+          message: document.getElementById('message').value,
+          file: document.getElementById('fileUpload').files[0] ? document.getElementById('fileUpload').files[0].name : "",
+          timestamp: new Date().toISOString()
+        };
+        
+        // Stocare în localStorage
+        let submissions = JSON.parse(localStorage.getItem('submissions')) || [];
+        submissions.push(submission);
+        localStorage.setItem('submissions', JSON.stringify(submissions));
+        
+        alert("Formular trimis și stocat local!");
+        form.reset();
+        // Ștergem clasele de valid/invalid după resetare
+        const fields = form.querySelectorAll('input, textarea, select');
+        fields.forEach(field => {
+          field.classList.remove('valid');
+          field.classList.remove('invalid');
+        });
+        displaySubmissions();
+      }
+    });
+    
+    // Resetare: curățare mesaje de eroare și clase de valid/invalid
+    document.getElementById('reset-btn').addEventListener('click', function() {
+      const errorSpans = document.querySelectorAll('.error');
+      errorSpans.forEach(span => span.textContent = "");
+      const fields = form.querySelectorAll('input, textarea, select');
+      fields.forEach(field => {
+        field.classList.remove('valid');
+        field.classList.remove('invalid');
+      });
+    });
+    
+    // Afișare submisii stocate
+    function displaySubmissions() {
+      const submissionList = document.getElementById('submission-list');
+      submissionList.innerHTML = "";
+      let submissions = JSON.parse(localStorage.getItem('submissions')) || [];
+      submissions.forEach(submission => {
+        const li = document.createElement('li');
+        li.textContent = `${submission.timestamp} - ${submission.name} (${submission.email}, ${submission.telephone}) - Categorie: ${submission.category}, Metodă: ${submission.contactMethod} - Mesaj: ${submission.message}` + 
+          (submission.file ? ` - Fișier: ${submission.file}` : "");
+        submissionList.appendChild(li);
+      });
+    }
+    
+    window.onload = displaySubmissions;
+  </script>
+</body>
+</html>

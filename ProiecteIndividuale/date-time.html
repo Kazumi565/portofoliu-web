@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Date & Time Processor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Date & Time Processor</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="slideshow.html">Slideshow</a>
+      <a href="form.html">Contact Form</a>
+    </nav>
+  </header>
+  <main>
+    <section id="date-time">
+      <h2>Current Date & Time</h2>
+      <p id="date-time-display"></p>
+      <div>
+        <label for="timezone">Choose Timezone (UTC offset):</label>
+        <select id="timezone">
+          <option value="0">UTC</option>
+          <option value="1">UTC+1</option>
+          <option value="2">UTC+2</option>
+          <option value="-1">UTC-1</option>
+          <option value="-2">UTC-2</option>
+        </select>
+      </div>
+      <p id="converted-time"></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Integrated Web Design Projects</p>
+  </footer>
+  <script>
+    function displayDateTime() {
+      const now = new Date();
+      const dateTimeDisplay = document.getElementById('date-time-display');
+      dateTimeDisplay.textContent = "Current Local Time: " + now.toLocaleString();
+
+      // Timezone Conversion
+      const timezoneSelect = document.getElementById('timezone');
+      const offset = parseInt(timezoneSelect.value);
+      const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const convertedTime = new Date(utcTime + (3600000 * offset));
+      const convertedDisplay = document.getElementById('converted-time');
+      convertedDisplay.textContent = "Time at UTC" + (offset >= 0 ? '+' : '') + offset + ": " + convertedTime.toLocaleString();
+    }
+
+    setInterval(displayDateTime, 1000);
+    displayDateTime();
+    document.getElementById('timezone').addEventListener('change', displayDateTime);
+  </script>
+</body>
+</html>
