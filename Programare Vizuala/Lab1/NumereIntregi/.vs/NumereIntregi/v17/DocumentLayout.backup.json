@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual Studio Projects\\Programare Vizuala\\Lab1\\NumereIntregi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2CA49C-1FF8-46C2-B8FC-9D3BDF759AB1}|NumereIntregi\\NumereIntregi.csproj|d:\\visual studio projects\\programare vizuala\\lab1\\numereintregi\\numereintregi\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF2CA49C-1FF8-46C2-B8FC-9D3BDF759AB1}|NumereIntregi\\NumereIntregi.csproj|solutionrelative:numereintregi\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2CA49C-1FF8-46C2-B8FC-9D3BDF759AB1}|NumereIntregi\\NumereIntregi.csproj|d:\\visual studio projects\\programare vizuala\\lab1\\numereintregi\\numereintregi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF2CA49C-1FF8-46C2-B8FC-9D3BDF759AB1}|NumereIntregi\\NumereIntregi.csproj|solutionrelative:numereintregi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2CA49C-1FF8-46C2-B8FC-9D3BDF759AB1}|NumereIntregi\\NumereIntregi.csproj|d:\\visual studio projects\\programare vizuala\\lab1\\numereintregi\\numereintregi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF2CA49C-1FF8-46C2-B8FC-9D3BDF759AB1}|NumereIntregi\\NumereIntregi.csproj|solutionrelative:numereintregi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\Programare Vizuala\\Lab1\\NumereIntregi\\NumereIntregi\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "NumereIntregi\\Form1.Designer.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\Programare Vizuala\\Lab1\\NumereIntregi\\NumereIntregi\\Form1.Designer.cs",
+              "RelativeToolTip": "NumereIntregi\\Form1.Designer.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAIMAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T17:16:30.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\Programare Vizuala\\Lab1\\NumereIntregi\\NumereIntregi\\Form1.cs",
+              "RelativeDocumentMoniker": "NumereIntregi\\Form1.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\Programare Vizuala\\Lab1\\NumereIntregi\\NumereIntregi\\Form1.cs",
+              "RelativeToolTip": "NumereIntregi\\Form1.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:56:22.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\Programare Vizuala\\Lab1\\NumereIntregi\\NumereIntregi\\Form1.cs",
+              "RelativeDocumentMoniker": "NumereIntregi\\Form1.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\Programare Vizuala\\Lab1\\NumereIntregi\\NumereIntregi\\Form1.cs [Design]",
+              "RelativeToolTip": "NumereIntregi\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:18:15.814Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
